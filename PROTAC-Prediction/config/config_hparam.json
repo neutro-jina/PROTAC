@@ -16,7 +16,7 @@
 	"loss_fn" : "smooth",
 
 	"traindata_rate" : 1.0,
-	"pretrained": {"chem": false, "prot": false},
+	"pretrained": {"chem": false, "poi": false, "e3": false},
 	"num_seed" : 9095
 }
 

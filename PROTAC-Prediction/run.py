@@ -27,7 +27,7 @@ def get_protac(drug_inputs, poi_inputs, e3_inputs):
 if __name__ == "__main__":
 
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-    os.environ["CUDA_VISIBLE_DEVICES"] = '0,1'
+    os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
     device_count = torch.cuda.device_count()
     device_protac = torch.device('cuda' if torch.cuda.is_available() else "cpu")
@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
     #--protac Model
     ##-- hyper param config file Load --##
-    config = load_hparams('/home/jina/PROTAC_NLP/PROTAC-Prediction/config/config_hparam.json')
+    config = load_hparams('./config/config_hparam.json')
     config = DictX(config)
     model = ProtacModel(d_model_name, poi_model_name, e3_model_name,
                                config.lr, config.dropout, config.layer_features, config.loss_fn, config.layer_limit, config.pretrained['chem'], config.pretrained['poi'], config.pretrained['e3']).to(device_protac)

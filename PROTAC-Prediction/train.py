@@ -3,8 +3,8 @@ from turtle import forward
 import numpy as np
 import pandas as pd
 import wandb 
-wandb.login(key="670a0e7850bd4044cacba50ca610b7b66a3de782")
-wandb.init(project='protac_project')
+# wandb.login(key="670a0e7850bd4044cacba50ca610b7b66a3de782")
+# wandb.init(project='protac_project')
 
 # ModuleNotFoundError 발생해서 다시 지정
 # from utils.utils import *

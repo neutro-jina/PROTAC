@@ -2,7 +2,7 @@
 	"prot_maxlength" : 545,
 	"layer_limit" : true,
 
-	"gpu_ids" : "4,6,7",
+	"gpu_ids" : "0",
 	"model_mode" : "train",
 	
 	"max_epoch": 50,

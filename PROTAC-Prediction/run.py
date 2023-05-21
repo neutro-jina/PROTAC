@@ -50,7 +50,7 @@ if __name__ == "__main__":
     config = load_hparams('/home/jina/PROTAC_NLP/PROTAC-Prediction/config/config_hparam.json')
     config = DictX(config)
     model = ProtacModel(d_model_name, poi_model_name, e3_model_name,
-                               config.lr, config.dropout, config.layer_features, config.loss_fn, config.layer_limit, config.pretrained['chem'], config.pretrained['prot']).to(device_protac)
+                               config.lr, config.dropout, config.layer_features, config.loss_fn, config.layer_limit, config.pretrained['chem'], config.pretrained['poi'], config.pretrained['e3']).to(device_protac)
 
     # model = ProtacModel.load_from_checkpoint('./biomarker_bindingdb_train8595_pretopre/3477h3wf/checkpoints/epoch=30-step=7284.ckpt').to(device_protac)
 

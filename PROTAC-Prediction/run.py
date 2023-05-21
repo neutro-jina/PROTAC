@@ -11,17 +11,17 @@ from util import *
 from tqdm import tqdm
 from train import ProtacModel
 
-def get_protac(drug_inputs, poi_inputs, e3_inputs):
-    output_preds = model(drug_inputs, poi_inputs, e3_inputs)
+# def get_protac(drug_inputs, poi_inputs, e3_inputs):
+#     output_preds = model(drug_inputs, poi_inputs, e3_inputs)
 
-    m = torch.nn.Sigmoid()
-    predict = torch.squeeze(m(output_preds)).tolist()
+#     m = torch.nn.Sigmoid()
+#     predict = torch.squeeze(m(output_preds)).tolist()
 
-    # output_preds = torch.relu(output_preds)
-    # predict = torch.tanh(output_preds)
-    # predict = predict.squeeze(dim=1).tolist()
+#     # output_preds = torch.relu(output_preds)
+#     # predict = torch.tanh(output_preds)
+#     # predict = predict.squeeze(dim=1).tolist()
 
-    return predict
+#     return predict
 
 
 if __name__ == "__main__":

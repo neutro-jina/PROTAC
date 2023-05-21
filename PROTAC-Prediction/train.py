@@ -459,7 +459,7 @@ def wandb_train(config=None):
             wandb.init()
         
         #밑에 두 줄 추가해봄
-        config = load_hparams('/home/jina/PROTAC_NLP/PROTAC-Prediction/config/config_hparam.json')
+        config = load_hparams('./config/config_hparam.json')
         config = DictX(config)
         
         #config = wandb.config
@@ -526,12 +526,12 @@ if __name__ == '__main__':
     wandb_project = "protac_project"
 
     ##-- hyper param config file Load --##
-    config = load_hparams('/home/jina/PROTAC_NLP/PROTAC-Prediction/config/config_hparam.json')
+    config = load_hparams('./config/config_hparam.json')
     wandb_train(config)
 
     
 #     # #-- wandb Sweep Hyper Param Tuning --##
-#     # config = load_hparams('/home/jina/PROTAC_NLP/PROTAC-Prediction/config/config_sweep.json')
+#     # config = load_hparams('./config/config_sweep.json')
 #     # sweep_id = wandb.sweep(config, project=wandb_project)
 #     # wandb.agent(sweep_id, wandb_train)
     

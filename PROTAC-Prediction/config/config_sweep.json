@@ -42,7 +42,7 @@
         
 
         "task_name" :{
-            "value" : "bindingdb"
+            "value" : "protacdb"
         },
         "lr": {
             "value": 5e-6

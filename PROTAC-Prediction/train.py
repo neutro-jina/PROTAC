@@ -256,7 +256,7 @@ class ProtacModel(pl.LightningModule):
         self.save_hyperparameters()
 
 
-    def forward(self, drug_inputs, prot_inputs):
+    def forward(self, drug_inputs, poi_inputs, e3_inputs):
         d_outputs = self.d_model(drug_inputs['input_ids'], drug_inputs['attention_mask'])
         poi_outputs = self.poi_model(poi_inputs['input_ids'], poi_inputs['attention_mask'])
         e3_outputs = self.e3_model(e3_inputs['input_ids'], e3_inputs['attention_mask'])
